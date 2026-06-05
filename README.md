@@ -2,8 +2,6 @@
 
 Full-stack ecommerce starter for Java, Spring Boot microservices, Angular, Kafka, PostgreSQL, MongoDB, Spring AI, LangChain4j, Ollama, and AWS deployment.
 
-GitHub owner: `Anilg1997`
-
 ## Modules
 
 - `frontend`: Angular ecommerce UI with catalog, cart, checkout, and AI assistant.
