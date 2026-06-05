@@ -1,0 +1,15 @@
+.idea/
+.vscode/
+target/
+node_modules/
+dist/
+.angular/
+.env
+*.log
+*.class
+*.jar
+coverage/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform/
+.terraform.lock.hcl
