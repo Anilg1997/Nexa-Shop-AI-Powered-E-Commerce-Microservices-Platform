@@ -1,6 +1,7 @@
 package com.anilg.ecommerce.order;
 
 import com.anilg.ecommerce.common.ApiResponse;
+import com.anilg.ecommerce.common.DomainEvent;
 import java.math.BigDecimal;
 import java.util.List;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -16,9 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/orders")
 public class OrderController {
     private final OrderRepository orders;
-    private final KafkaTemplate<String, String> kafka;
+    private final KafkaTemplate<String, DomainEvent> kafka;
 
-    public OrderController(OrderRepository orders, KafkaTemplate<String, String> kafka) {
+    public OrderController(OrderRepository orders, KafkaTemplate<String, DomainEvent> kafka) {
         this.orders = orders;
         this.kafka = kafka;
     }
@@ -30,7 +31,12 @@ public class OrderController {
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
         order.setTotal(total);
         PurchaseOrder saved = orders.save(order);
-        kafka.send("orders.created", String.valueOf(saved.getId()), saved.getCustomerEmail());
+        kafka.send("commerce.events", String.valueOf(saved.getId()), DomainEvent.of(
+                "ORDER_CREATED",
+                String.valueOf(saved.getId()),
+                saved.getCustomerEmail(),
+                java.util.Map.of("orderId", saved.getId(), "customerEmail", saved.getCustomerEmail(), "total", saved.getTotal())
+        ));
         return ApiResponse.ok(saved);
     }
 

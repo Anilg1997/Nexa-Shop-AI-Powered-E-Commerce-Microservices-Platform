@@ -32,10 +32,30 @@ spring:
           uri: lb://catalog-service
           predicates:
             - Path=/api/catalog/**
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/api/cart/**
         - id: order-service
           uri: lb://order-service
           predicates:
             - Path=/api/orders/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/api/payments/**
+        - id: shipping-service
+          uri: lb://shipping-service
+          predicates:
+            - Path=/api/shipping/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/notifications/**
+        - id: analytics-service
+          uri: lb://analytics-service
+          predicates:
+            - Path=/api/analytics/**
         - id: ai-service
           uri: lb://ai-service
           predicates:

@@ -9,6 +9,8 @@ spring:
       uri: ${MONGODB_URI:mongodb://admin:admin@localhost:27017/catalogdb?authSource=admin}
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 eureka:
   client:

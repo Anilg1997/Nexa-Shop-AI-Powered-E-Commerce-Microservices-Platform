@@ -16,9 +16,14 @@ Start services in this order:
 2. `api-gateway`
 3. `auth-service`
 4. `catalog-service`
-5. `order-service`
-6. `ai-service`
-7. Angular frontend
+5. `cart-service`
+6. `order-service`
+7. `payment-service`
+8. `shipping-service`
+9. `notification-service`
+10. `analytics-service`
+11. `ai-service`
+12. Angular frontend
 
 ## AWS Free-Tier Friendly Path
 
@@ -45,6 +50,7 @@ When the app is ready for paid production:
 - ECS Fargate for Spring services.
 - RDS PostgreSQL for auth/order data.
 - DocumentDB or MongoDB Atlas for catalog.
+- ElastiCache Redis for carts and hot product cache.
 - MSK or Redpanda Cloud for Kafka.
 - S3 + CloudFront for Angular static files.
 - Secrets Manager for passwords and tokens.

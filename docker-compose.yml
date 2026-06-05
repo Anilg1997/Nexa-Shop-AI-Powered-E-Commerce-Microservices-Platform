@@ -48,6 +48,14 @@ services:
     volumes:
       - redpanda-data:/var/lib/redpanda/data
 
+  redis:
+    image: redis:7-alpine
+    container_name: ai-commerce-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
   pgadmin:
     image: dpage/pgadmin4:8
     container_name: ai-commerce-pgadmin
@@ -68,7 +76,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://admin:admin@mongo:27017/
       ME_CONFIG_BASICAUTH: "false"
     ports:
-      - "8088:8081"
+      - "8098:8081"
     depends_on:
       - mongo
 
@@ -76,3 +84,4 @@ volumes:
   postgres-data:
   mongo-data:
   redpanda-data:
+  redis-data:

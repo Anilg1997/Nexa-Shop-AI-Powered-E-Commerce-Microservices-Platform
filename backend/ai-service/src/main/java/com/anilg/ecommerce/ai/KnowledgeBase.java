@@ -9,8 +9,12 @@ public class KnowledgeBase {
             "Orders can be created after products are added to cart and customer email is provided.",
             "Catalog products include name, description, price, stock, and image URL.",
             "The local AI model runs through Ollama at http://localhost:11434.",
-            "Kafka topics used by the platform include catalog.product.created and orders.created.",
-            "PostgreSQL stores auth and order data; MongoDB stores catalog data."
+            "Kafka uses the unified commerce.events topic for all ecommerce lifecycle events.",
+            "PostgreSQL stores auth, order, payment, shipping, notification, and analytics data.",
+            "Redis stores live shopping carts for fast add, delete, and clear operations.",
+            "The commerce.events Kafka topic tracks USER_REGISTERED, USER_LOGGED_IN, CART_ITEM_ADDED, CART_ITEM_REMOVED, ORDER_CREATED, PAYMENT_COMPLETED, ORDER_SHIPPED, and ORDER_DELIVERED.",
+            "Analytics service consumes commerce.events and exposes /api/analytics/dashboard for real-time funnel analysis.",
+            "Notification service listens to lifecycle events and records demo email notifications."
     );
 
     public List<String> search(String query) {

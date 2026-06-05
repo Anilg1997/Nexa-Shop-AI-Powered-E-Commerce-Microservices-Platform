@@ -11,7 +11,12 @@ GitHub owner: `Anilg1997`
 - `backend/api-gateway`: Spring Cloud Gateway entry point.
 - `backend/auth-service`: demo login/register profile API backed by PostgreSQL.
 - `backend/catalog-service`: product catalog backed by MongoDB.
+- `backend/cart-service`: Redis-backed live cart with add/delete/clear APIs.
 - `backend/order-service`: order workflow backed by PostgreSQL and Kafka.
+- `backend/payment-service`: demo payment processing and payment events.
+- `backend/shipping-service`: shipment tracking, delivery updates, and payment-triggered shipping.
+- `backend/notification-service`: demo email notifications generated from lifecycle events.
+- `backend/analytics-service`: Kafka event consumer and real-time dashboard API.
 - `backend/ai-service`: Spring AI + Ollama assistant endpoints for RAG and agent-style ecommerce help.
 - `infra/aws`: Terraform starter for AWS.
 
@@ -34,7 +39,7 @@ ollama serve
 docker compose up -d
 ```
 
-This starts PostgreSQL, MongoDB, Redpanda Kafka, and admin tools.
+This starts PostgreSQL, MongoDB, Redis, Redpanda Kafka, and admin tools.
 
 ## Build Backend
 
@@ -50,11 +55,21 @@ mvn -pl service-registry spring-boot:run
 mvn -pl api-gateway spring-boot:run
 mvn -pl auth-service spring-boot:run
 mvn -pl catalog-service spring-boot:run
+mvn -pl cart-service spring-boot:run
 mvn -pl order-service spring-boot:run
+mvn -pl payment-service spring-boot:run
+mvn -pl shipping-service spring-boot:run
+mvn -pl notification-service spring-boot:run
+mvn -pl analytics-service spring-boot:run
 mvn -pl ai-service spring-boot:run
 ```
 
 Gateway: `http://localhost:8080`
+
+Admin tools:
+
+- PgAdmin: `http://localhost:5050`
+- Mongo Express: `http://localhost:8098`
 
 ## Run Frontend
 
@@ -65,6 +80,14 @@ npm start
 ```
 
 Angular app: `http://localhost:4200`
+
+## Real-Time Flow
+
+The platform emits all lifecycle events to Kafka topic `commerce.events`:
+
+`USER_REGISTERED -> USER_LOGGED_IN -> CART_ITEM_ADDED -> CART_ITEM_REMOVED -> ORDER_CREATED -> PAYMENT_COMPLETED -> ORDER_SHIPPED -> ORDER_DELIVERED`
+
+Analytics and notification services consume this topic. The AI service can use the analytics dashboard as context for agentic analysis.
 
 ## GitHub Setup
 
