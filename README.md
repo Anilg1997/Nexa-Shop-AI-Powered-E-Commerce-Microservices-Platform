@@ -2,6 +2,20 @@
 
 Full-stack ecommerce starter for Java, Spring Boot microservices, Angular, Kafka, PostgreSQL, MongoDB, Spring AI, LangChain4j, Ollama, and AWS deployment.
 
+---
+
+## 📸 Screenshots
+
+| Page | Preview |
+|------|---------|
+| **Login** — E-commerce login with email/password and social sign-in | ![Login](screenshots/login.svg) |
+| **Home** — Product showcase with categories, featured items, and AI recommendations | ![Home](screenshots/home.svg) |
+| **Products** — Product catalog with filters, search, and AI-powered sorting | ![Products](screenshots/products.svg) |
+| **Cart** — Shopping cart with order summary, coupons, and AI suggestions | ![Cart](screenshots/cart.svg) |
+| **AI Chat** — AI shopping assistant with product comparison and recommendations | ![AI Chat](screenshots/ai-chat.svg) |
+
+---
+
 ## Modules
 
 - `frontend`: Angular ecommerce UI with catalog, cart, checkout, and AI assistant.

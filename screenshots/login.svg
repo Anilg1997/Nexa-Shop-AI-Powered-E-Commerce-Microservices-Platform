@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="'Segoe UI','Inter',sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874f0"/><stop offset="100%" stop-color="#1a5dc8"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.1"/></filter>
+  </defs>
+  <rect width="1100" height="750" fill="#f1f3f6"/>
+
+  <!-- Header -->
+  <rect width="1100" height="56" fill="url(#headerGrad)"/>
+  <text x="24" y="36" fill="white" font-size="20" font-weight="700">🛍 AI Commerce</text>
+  <rect x="180" y="12" rx="4" ry="4" width="400" height="32" fill="white"/>
+  <text x="196" y="33" font-size="13" fill="#999">🔍 Search for products, brands and more</text>
+  <text x="850" y="36" fill="white" font-size="14">🛒 Cart</text>
+
+  <!-- Login Card -->
+  <rect x="325" y="80" rx="16" ry="16" width="450" height="520" fill="white" filter="url(#shadow)"/>
+  <text x="550" y="130" font-size="28" font-weight="700" fill="#2874f0" text-anchor="middle">🛍 AI Commerce</text>
+  <text x="550" y="158" font-size="14" fill="#666" text-anchor="middle">Sign in to your account</text>
+
+  <!-- Mobile/Email -->
+  <text x="360" y="190" font-size="12" fill="#333" font-weight="500">Email / Mobile Number</text>
+  <rect x="360" y="198" rx="8" ry="8" width="380" height="48" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="376" y="230" font-size="14" fill="#333">anil@example.com</text>
+
+  <!-- Password -->
+  <text x="360" y="266" font-size="12" fill="#333" font-weight="500">Password</text>
+  <rect x="360" y="274" rx="8" ry="8" width="380" height="48" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="376" y="306" font-size="14" fill="#333">••••••••</text>
+
+  <!-- Forgot -->
+  <text x="680" y="340" font-size="12" fill="#2874f0" text-anchor="end">Forgot?</text>
+
+  <!-- Login button -->
+  <rect x="360" y="360" rx="8" ry="8" width="380" height="48" fill="url(#headerGrad)"/>
+  <text x="550" y="392" fill="white" font-size="15" font-weight="600" text-anchor="middle">Sign In</text>
+
+  <!-- OR -->
+  <text x="550" y="430" fill="#999" font-size="12" text-anchor="middle">────────────────────  OR  ────────────────────</text>
+
+  <!-- Google -->
+  <rect x="360" y="450" rx="8" ry="8" width="380" height="44" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="550" y="479" fill="#666" font-size="13" text-anchor="middle">🔵 Continue with Google</text>
+
+  <!-- Register link -->
+  <text x="550" y="530" fill="#666" font-size="13" text-anchor="middle">New to AI Commerce?</text>
+  <text x="550" y="554" fill="#2874f0" font-size="14" font-weight="600" text-anchor="middle">Create an account</text>
+
+  <!-- Footer note -->
+  <text x="550" y="580" fill="#999" font-size="11" text-anchor="middle">By continuing, you agree to our Terms of Use & Privacy Policy</text>
+</svg>

@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="'Segoe UI','Inter',sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874f0"/><stop offset="100%" stop-color="#1a5dc8"/>
+    </linearGradient>
+    <linearGradient id="userBubble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874f0"/><stop offset="100%" stop-color="#1a5dc8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="750" fill="#f5f7fb"/>
+  <!-- Header -->
+  <rect width="1100" height="56" fill="white"/>
+  <line x1="0" y1="56" x2="1100" y2="56" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="24" y="36" fill="#2874f0" font-size="20" font-weight="700">🛍 AI Commerce</text>
+  <text x="850" y="36" fill="#2874f0" font-size="14">🛒 Cart</text>
+
+  <!-- Chat Layout -->
+  <rect x="240" y="56" width="620" height="694" fill="white"/>
+  <!-- Chat Header -->
+  <rect x="240" y="56" width="620" height="60" fill="url(#headerGrad)"/>
+  <circle cx="272" cy="86" r="18" fill="rgba(255,255,255,0.2)"/>
+  <text x="272" y="92" font-size="18" fill="white" text-anchor="middle">🤖</text>
+  <text x="298" y="84" font-size="15" fill="white" font-weight="600">AI Shopping Assistant</text>
+  <text x="298" y="104" font-size="11" fill="rgba(255,255,255,0.8)">Online • Powered by Ollama</text>
+
+  <!-- Chat Messages -->
+  <!-- AI Welcome -->
+  <rect x="262" y="136" rx="16" ry="16" width="400" height="48" fill="#f0f2f5"/>
+  <text x="278" y="158" font-size="13" fill="#333">Hi! I'm your AI shopping assistant. I can help</text>
+  <text x="278" y="176" font-size="13" fill="#333">you find products, compare items, and more! 🛍</text>
+
+  <!-- User message -->
+  <rect x="500" y="204" rx="16" ry="16" width="340" height="48" fill="url(#userBubble)"/>
+  <text x="516" y="226" font-size="13" fill="white">I need a laptop for programming and</text>
+  <text x="516" y="244" font-size="13" fill="white">gaming. Budget under ₹80,000.</text>
+
+  <!-- AI Response -->
+  <rect x="262" y="272" rx="16" ry="16" width="550" height="135" fill="#f0f2f5"/>
+  <text x="278" y="294" font-size="13" fill="#333" font-weight="600">🎯 Great! Here are my top 3 picks for you:</text>
+  <text x="278" y="316" font-size="13" fill="#333">1. 💻 <tspan font-weight="600">Lenovo Legion 5</tspan> — ₹76,990 (Ryzen 7, RTX 3050)</text>
+  <text x="278" y="336" font-size="13" fill="#333">2. 💻 <tspan font-weight="600">Acer Predator Helios Neo</tspan> — ₹79,999 (i7, RTX 3060)</text>
+  <text x="278" y="356" font-size="13" fill="#333">3. 💻 <tspan font-weight="600">HP Victus 16</tspan> — ₹72,999 (Ryzen 5, RTX 3050)</text>
+  <text x="278" y="380" font-size="12" fill="#2874f0">👉 Compare these laptops? I can show a table.</text>
+
+  <!-- User -->
+  <rect x="600" y="428" rx="16" ry="16" width="240" height="32" fill="url(#userBubble)"/>
+  <text x="616" y="450" font-size="13" fill="white">Yes, compare them please!</text>
+
+  <!-- AI typing -->
+  <rect x="262" y="480" rx="16" ry="16" width="80" height="36" fill="#f0f2f5"/>
+  <circle cx="282" cy="498" r="4" fill="#2874f0"><animate attributeName="cy" values="498;490;498" dur="1.4s" repeatCount="indefinite"/></circle>
+  <circle cx="298" cy="498" r="4" fill="#2874f0"><animate attributeName="cy" values="498;490;498" dur="1.4s" begin="0.2s" repeatCount="indefinite"/></circle>
+  <circle cx="314" cy="498" r="4" fill="#2874f0"><animate attributeName="cy" values="498;490;498" dur="1.4s" begin="0.4s" repeatCount="indefinite"/></circle>
+
+  <!-- Product Recommendations Card -->
+  <rect x="262" y="536" rx="12" ry="12" width="578" height="150" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="278" y="560" font-size="13" fill="#333" font-weight="600">💻 Laptop Comparison</text>
+  <!-- Mini table -->
+  <rect x="278" y="574" width="160" height="24" fill="#f5f5f5"/>
+  <text x="288" y="591" font-size="10" fill="#666">Specs</text>
+  <rect x="438" y="574" width="120" height="24" fill="#e3f2fd"/>
+  <text x="498" y="591" font-size="10" fill="#2874f0" text-anchor="middle">Legion 5</text>
+  <rect x="558" y="574" width="120" height="24" fill="#fce4ec"/>
+  <text x="618" y="591" font-size="10" fill="#d32f2f" text-anchor="middle">Predator</text>
+  <rect x="678" y="574" width="90" height="24" fill="#e8f5e9"/>
+  <text x="723" y="591" font-size="10" fill="#388e3c" text-anchor="middle">Victus</text>
+  <rect x="278" y="598" width="160" height="22" fill="#fafafa"/>
+  <text x="288" y="614" font-size="10" fill="#555">Processor</text>
+  <rect x="438" y="598" width="120" height="22" fill="#fafafa"/>
+  <text x="498" y="614" font-size="10" fill="#333" text-anchor="middle">Ryzen 7</text>
+  <rect x="558" y="598" width="120" height="22" fill="#fafafa"/>
+  <text x="618" y="614" font-size="10" fill="#333" text-anchor="middle">i7-13620H</text>
+  <rect x="678" y="598" width="90" height="22" fill="#fafafa"/>
+  <text x="723" y="614" font-size="10" fill="#333" text-anchor="middle">Ryzen 5</text>
+  <rect x="278" y="620" width="160" height="22" fill="#fafafa"/>
+  <text x="288" y="636" font-size="10" fill="#555">GPU</text>
+  <rect x="438" y="620" width="120" height="22" fill="#fafafa"/>
+  <text x="498" y="636" font-size="10" fill="#333" text-anchor="middle">RTX 3050</text>
+  <rect x="558" y="620" width="120" height="22" fill="#fafafa"/>
+  <text x="618" y="636" font-size="10" fill="#333" text-anchor="middle">RTX 3060</text>
+  <rect x="678" y="620" width="90" height="22" fill="#fafafa"/>
+  <text x="723" y="636" font-size="10" fill="#333" text-anchor="middle">RTX 3050</text>
+  <rect x="278" y="642" width="160" height="22" fill="#fafafa"/>
+  <text x="288" y="658" font-size="10" fill="#555">Price</text>
+  <rect x="438" y="642" width="120" height="22" fill="#fafafa"/>
+  <text x="498" y="658" font-size="10" fill="#388e3c" text-anchor="middle">₹76,990</text>
+  <rect x="558" y="642" width="120" height="22" fill="#fafafa"/>
+  <text x="618" y="658" font-size="10" fill="#388e3c" text-anchor="middle">₹79,999</text>
+  <rect x="678" y="642" width="90" height="22" fill="#fafafa"/>
+  <text x="723" y="658" font-size="10" fill="#388e3c" text-anchor="middle">₹72,999</text>
+
+  <!-- Input area -->
+  <line x1="240" y1="710" x2="860" y2="710" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="256" y="716" rx="20" ry="20" width="520" height="36" fill="white" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="272" y="739" font-size="13" fill="#999">Ask me anything about shopping...</text>
+  <circle cx="830" cy="734" r="18" fill="url(#headerGrad)"/>
+  <polygon points="824,734 836,727 836,741" fill="white"/>
+
+  <!-- Product detail panel (right side) -->
+  <rect x="860" y="56" width="240" height="694" fill="white"/>
+  <line x1="860" y1="56" x2="860" y2="750" stroke="#e0e0e0" stroke-width="1"/>
+  <rect x="876" y="72" rx="8" ry="8" width="208" height="140" fill="#e3f2fd"/>
+  <text x="980" y="156" font-size="48" text-anchor="middle">💻</text>
+  <text x="876" y="230" font-size="13" fill="#1a1a2e" font-weight="600">Lenovo Legion 5</text>
+  <text x="876" y="250" font-size="11" fill="#666">AMD Ryzen 7 • RTX 3050</text>
+  <text x="876" y="270" font-size="16" fill="#388e3c" font-weight="700">₹76,990</text>
+  <rect x="876" y="290" rx="6" ry="6" width="208" height="36" fill="url(#headerGrad)"/>
+  <text x="980" y="314" fill="white" font-size="12" text-anchor="middle" font-weight="600">View Product →</text>
+  <text x="876" y="340" font-size="12" fill="#666">★ 4.5 • 245 Reviews</text>
+  <line x1="876" y1="360" x2="1084" y2="360" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="876" y="386" font-size="12" fill="#333" font-weight="500">Key Features</text>
+  <text x="876" y="408" font-size="11" fill="#666">• 15.6" FHD 165Hz Display</text>
+  <text x="876" y="424" font-size="11" fill="#666">• 16GB DDR5 RAM</text>
+  <text x="876" y="440" font-size="11" fill="#666">• 512GB SSD Storage</text>
+  <text x="876" y="456" font-size="11" fill="#666">• Windows 11 Home</text>
+  <text x="876" y="472" font-size="11" fill="#666">• 80Wh Battery</text>
+</svg>

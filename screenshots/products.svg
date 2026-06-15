@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="'Segoe UI','Inter',sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874f0"/><stop offset="100%" stop-color="#1a5dc8"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1100" height="750" fill="#f1f3f6"/>
+  <!-- Header -->
+  <rect width="1100" height="56" fill="url(#headerGrad)"/>
+  <text x="24" y="36" fill="white" font-size="20" font-weight="700">🛍 AI Commerce</text>
+  <rect x="180" y="12" rx="4" ry="4" width="400" height="32" fill="white"/>
+  <text x="196" y="33" font-size="13" fill="#999">🔍 Search for products, brands and more</text>
+  <text x="850" y="36" fill="white" font-size="14">🛒 Cart</text>
+
+  <!-- Category breadcrumb -->
+  <text x="24" y="86" font-size="13" fill="#666">Home &gt; Electronics &gt; <tspan fill="#2874f0" font-weight="600">Smartphones</tspan></text>
+  <text x="24" y="116" font-size="22" fill="#1a1a2e" font-weight="700">Smartphones (24 products)</text>
+  <text x="24" y="138" font-size="12" fill="#666">AI recommends: iPhone 15, Samsung S24, OnePlus 12</text>
+
+  <!-- Filters sidebar -->
+  <rect x="24" y="156" rx="12" ry="12" width="240" height="560" fill="white" filter="url(#shadow)"/>
+  <text x="40" y="186" font-size="15" fill="#1a1a2e" font-weight="600">Filters</text>
+  <text x="40" y="216" font-size="13" fill="#333" font-weight="500">Price Range</text>
+  <rect x="40" y="226" rx="4" ry="4" width="100" height="30" fill="#f5f5f5" stroke="#dee2e6" stroke-width="1"/>
+  <text x="54" y="246" font-size="12" fill="#333">₹5,000</text>
+  <text x="148" y="246" font-size="12" fill="#666">—</text>
+  <rect x="162" y="226" rx="4" ry="4" width="86" height="30" fill="#f5f5f5" stroke="#dee2e6" stroke-width="1"/>
+  <text x="176" y="246" font-size="12" fill="#333">₹80,000</text>
+  <rect x="40" y="268" rx="6" ry="6" width="208" height="4" fill="#e0e0e0"/>
+  <circle cx="100" cy="270" r="8" fill="#2874f0"/>
+  <circle cx="160" cy="270" r="8" fill="#2874f0"/>
+
+  <text x="40" y="306" font-size="13" fill="#333" font-weight="500">Brand</text>
+  <rect x="40" y="314" rx="4" ry="4" width="14" height="14" fill="#2874f0"/>
+  <text x="44" y="326" fill="white" font-size="9">✓</text>
+  <text x="62" y="326" font-size="12" fill="#333">Samsung</text>
+  <rect x="160" y="314" rx="4" ry="4" width="14" height="14" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="180" y="326" font-size="12" fill="#333">Apple</text>
+  <rect x="40" y="344" rx="4" ry="4" width="14" height="14" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="62" y="356" font-size="12" fill="#333">OnePlus</text>
+  <rect x="160" y="344" rx="4" ry="4" width="14" height="14" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="180" y="356" font-size="12" fill="#333">Xiaomi</text>
+
+  <text x="40" y="390" font-size="13" fill="#333" font-weight="500">RAM</text>
+  <rect x="40" y="398" rx="14" ry="14" width="60" height="28" fill="#e3f2fd" stroke="#2874f0" stroke-width="1"/>
+  <text x="70" y="417" font-size="11" fill="#2874f0" text-anchor="middle">4GB</text>
+  <rect x="108" y="398" rx="14" ry="14" width="60" height="28" fill="#e3f2fd" stroke="#2874f0" stroke-width="1"/>
+  <text x="138" y="417" font-size="11" fill="#2874f0" text-anchor="middle">6GB</text>
+  <rect x="176" y="398" rx="14" ry="14" width="60" height="28" fill="#2874f0"/>
+  <text x="206" y="417" font-size="11" fill="white" text-anchor="middle">8GB</text>
+
+  <!-- Product List -->
+  <!-- Product 1 -->
+  <rect x="280" y="156" rx="12" ry="12" width="790" height="120" fill="white" filter="url(#shadow)"/>
+  <rect x="296" y="172" rx="8" ry="8" width="100" height="88" fill="#e3f2fd"/>
+  <text x="346" y="230" font-size="36" text-anchor="middle">📱</text>
+  <text x="412" y="194" font-size="15" fill="#1a1a2e" font-weight="600">Samsung Galaxy S24 Ultra</text>
+  <rect x="412" y="204" rx="4" ry="4" width="70" height="18" fill="#388e3c"/>
+  <text x="447" y="217" font-size="10" fill="white" text-anchor="middle">4.5 ★</text>
+  <text x="412" y="234" font-size="12" fill="#666">12GB RAM, 256GB Storage, 200MP Camera</text>
+  <text x="412" y="254" font-size="18" fill="#388e3c" font-weight="700">₹1,24,999</text>
+  <text x="500" y="254" font-size="12" fill="#666" text-decoration="line-through">₹1,49,999</text>
+  <rect x="830" y="200" rx="8" ry="8" width="120" height="36" fill="url(#headerGrad)"/>
+  <text x="890" y="224" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+  <text x="830" y="252" font-size="12" fill="#2874f0" font-weight="500">🤖 AI Pick</text>
+
+  <line x1="280" y1="290" x2="1070" y2="290" stroke="#f1f3f6" stroke-width="1"/>
+
+  <!-- Product 2 -->
+  <rect x="280" y="294" rx="12" ry="12" width="790" height="120" fill="white" filter="url(#shadow)"/>
+  <rect x="296" y="310" rx="8" ry="8" width="100" height="88" fill="#fce4ec"/>
+  <text x="346" y="368" font-size="36" text-anchor="middle">📱</text>
+  <text x="412" y="332" font-size="15" fill="#1a1a2e" font-weight="600">Apple iPhone 15 Pro Max</text>
+  <rect x="412" y="342" rx="4" ry="4" width="70" height="18" fill="#388e3c"/>
+  <text x="447" y="355" font-size="10" fill="white" text-anchor="middle">4.7 ★</text>
+  <text x="412" y="372" font-size="12" fill="#666">8GB RAM, 256GB, A17 Pro Chip</text>
+  <text x="412" y="392" font-size="18" fill="#388e3c" font-weight="700">₹1,59,900</text>
+  <text x="500" y="392" font-size="12" fill="#666" text-decoration="line-through">₹1,79,900</text>
+  <rect x="830" y="338" rx="8" ry="8" width="120" height="36" fill="url(#headerGrad)"/>
+  <text x="890" y="362" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+  <text x="830" y="390" font-size="12" fill="#2874f0" font-weight="500">Best Seller</text>
+
+  <line x1="280" y1="428" x2="1070" y2="428" stroke="#f1f3f6" stroke-width="1"/>
+
+  <!-- Product 3 -->
+  <rect x="280" y="432" rx="12" ry="12" width="790" height="120" fill="white" filter="url(#shadow)"/>
+  <rect x="296" y="448" rx="8" ry="8" width="100" height="88" fill="#fff3e0"/>
+  <text x="346" y="506" font-size="36" text-anchor="middle">📱</text>
+  <text x="412" y="470" font-size="15" fill="#1a1a2e" font-weight="600">OnePlus 12 Pro</text>
+  <rect x="412" y="480" rx="4" ry="4" width="70" height="18" fill="#388e3c"/>
+  <text x="447" y="493" font-size="10" fill="white" text-anchor="middle">4.3 ★</text>
+  <text x="412" y="510" font-size="12" fill="#666">16GB RAM, 512GB, Hasselblad Camera</text>
+  <text x="412" y="530" font-size="18" fill="#388e3c" font-weight="700">₹69,999</text>
+  <text x="500" y="530" font-size="12" fill="#666" text-decoration="line-through">₹89,999</text>
+  <rect x="830" y="476" rx="8" ry="8" width="120" height="36" fill="url(#headerGrad)"/>
+  <text x="890" y="500" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+  <text x="830" y="528" font-size="12" fill="#d32f2f" font-weight="600">-22% Offer</text>
+
+  <!-- Pagination -->
+  <rect x="600" y="580" rx="6" ry="6" width="36" height="36" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="618" y="604" font-size="13" fill="#2874f0" text-anchor="middle" font-weight="600">1</text>
+  <rect x="640" y="580" rx="6" ry="6" width="36" height="36" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="658" y="604" font-size="13" fill="#666" text-anchor="middle">2</text>
+  <rect x="680" y="580" rx="6" ry="6" width="36" height="36" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="698" y="604" font-size="13" fill="#666" text-anchor="middle">3</text>
+  <text x="720" y="604" font-size="13" fill="#666">...</text>
+  <rect x="740" y="580" rx="6" ry="6" width="36" height="36" fill="white" stroke="#dee2e6" stroke-width="1"/>
+  <text x="758" y="604" font-size="13" fill="#666" text-anchor="middle">8</text>
+</svg>

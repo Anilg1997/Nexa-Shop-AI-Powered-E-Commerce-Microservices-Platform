@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="'Segoe UI','Inter',sans-serif">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2874f0"/><stop offset="100%" stop-color="#1a5dc8"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.08"/></filter>
+  </defs>
+  <rect width="1100" height="750" fill="#f1f3f6"/>
+
+  <!-- Header -->
+  <rect width="1100" height="56" fill="url(#headerGrad)"/>
+  <text x="24" y="36" fill="white" font-size="20" font-weight="700">🛍 AI Commerce</text>
+  <rect x="180" y="12" rx="4" ry="4" width="400" height="32" fill="white"/>
+  <text x="196" y="33" font-size="13" fill="#999">🔍 Search for products, brands and more</text>
+  <text x="640" y="36" fill="white" font-size="14" font-weight="500">Login</text>
+  <rect x="710" y="14" rx="6" ry="6" width="90" height="28" fill="white"/>
+  <text x="755" y="33" fill="#2874f0" font-size="13" text-anchor="middle" font-weight="600">Become Seller</text>
+  <text x="850" y="36" fill="white" font-size="14">🛒 Cart</text>
+
+  <!-- Hero Banner -->
+  <rect y="56" width="1100" height="160" fill="url(#headerGrad)" opacity="0.95"/>
+  <text x="550" y="110" font-size="32" fill="white" font-weight="800" text-anchor="middle">Discover Amazing Products</text>
+  <text x="550" y="140" font-size="15" fill="rgba(255,255,255,0.85)" text-anchor="middle">AI-powered shopping with personalized recommendations and smart assistant</text>
+  <!-- Category pills -->
+  <rect x="200" y="164" rx="18" ry="18" width="120" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="260" y="185" font-size="13" fill="white" text-anchor="middle">📱 Electronics</text>
+  <rect x="330" y="164" rx="18" ry="18" width="100" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="380" y="185" font-size="13" fill="white" text-anchor="middle">👕 Fashion</text>
+  <rect x="440" y="164" rx="18" ry="18" width="100" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="490" y="185" font-size="13" fill="white" text-anchor="middle">📚 Books</text>
+  <rect x="550" y="164" rx="18" ry="18" width="120" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="610" y="185" font-size="13" fill="white" text-anchor="middle">🏠 Home & Kitchen</text>
+  <rect x="680" y="164" rx="18" ry="18" width="100" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="730" y="185" font-size="13" fill="white" text-anchor="middle">💄 Beauty</text>
+  <rect x="790" y="164" rx="18" ry="18" width="120" height="32" fill="rgba(255,255,255,0.2)"/>
+  <text x="850" y="185" font-size="13" fill="white" text-anchor="middle">🤖 AI Picks</text>
+
+  <!-- Featured Products -->
+  <text x="24" y="250" font-size="18" fill="#1a1a2e" font-weight="600">🔥 Featured Products</text>
+  <text x="24" y="272" font-size="12" fill="#666">AI-curated just for you</text>
+
+  <!-- Product Cards -->
+  <rect x="24" y="290" rx="8" ry="8" width="200" height="300" fill="white" filter="url(#shadow)"/>
+  <rect x="24" y="290" rx="8" ry="8" width="200" height="150" fill="#e3f2fd"/>
+  <text x="124" y="380" font-size="48" text-anchor="middle">📱</text>
+  <text x="40" y="464" font-size="14" fill="#1a1a2e" font-weight="600">Smartphone X Pro</text>
+  <text x="40" y="484" font-size="11" fill="#666">6.5" AMOLED, 128GB</text>
+  <text x="40" y="508" font-size="16" fill="#388e3c" font-weight="700">₹24,999</text>
+  <text x="110" y="508" font-size="12" fill="#666" text-decoration="line-through">₹34,999</text>
+  <rect x="40" y="526" rx="6" ry="6" width="168" height="32" fill="url(#headerGrad)"/>
+  <text x="124" y="548" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <rect x="240" y="290" rx="8" ry="8" width="200" height="300" fill="white" filter="url(#shadow)"/>
+  <rect x="240" y="290" rx="8" ry="8" width="200" height="150" fill="#fff3e0"/>
+  <text x="340" y="380" font-size="48" text-anchor="middle">🎧</text>
+  <text x="256" y="464" font-size="14" fill="#1a1a2e" font-weight="600">Wireless Headphones</text>
+  <text x="256" y="484" font-size="11" fill="#666">Noise cancelling, 40hrs</text>
+  <text x="256" y="508" font-size="16" fill="#388e3c" font-weight="700">₹4,999</text>
+  <text x="326" y="508" font-size="12" fill="#666" text-decoration="line-through">₹7,999</text>
+  <rect x="256" y="526" rx="6" ry="6" width="168" height="32" fill="url(#headerGrad)"/>
+  <text x="340" y="548" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <rect x="456" y="290" rx="8" ry="8" width="200" height="300" fill="white" filter="url(#shadow)"/>
+  <rect x="456" y="290" rx="8" ry="8" width="200" height="150" fill="#e8f5e9"/>
+  <text x="556" y="380" font-size="48" text-anchor="middle">⌚</text>
+  <text x="472" y="464" font-size="14" fill="#1a1a2e" font-weight="600">Smart Watch</text>
+  <text x="472" y="484" font-size="11" fill="#666">Heart rate, SpO2, GPS</text>
+  <text x="472" y="508" font-size="16" fill="#388e3c" font-weight="700">₹3,999</text>
+  <text x="542" y="508" font-size="12" fill="#666" text-decoration="line-through">₹5,999</text>
+  <rect x="472" y="526" rx="6" ry="6" width="168" height="32" fill="url(#headerGrad)"/>
+  <text x="556" y="548" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <rect x="672" y="290" rx="8" ry="8" width="200" height="300" fill="white" filter="url(#shadow)"/>
+  <rect x="672" y="290" rx="8" ry="8" width="200" height="150" fill="#fce4ec"/>
+  <text x="772" y="380" font-size="48" text-anchor="middle">📷</text>
+  <text x="688" y="464" font-size="14" fill="#1a1a2e" font-weight="600">Digital Camera</text>
+  <text x="688" y="484" font-size="11" fill="#666">24MP, 4K Video, WiFi</text>
+  <text x="688" y="508" font-size="16" fill="#388e3c" font-weight="700">₹45,999</text>
+  <text x="758" y="508" font-size="12" fill="#666" text-decoration="line-through">₹59,999</text>
+  <rect x="688" y="526" rx="6" ry="6" width="168" height="32" fill="url(#headerGrad)"/>
+  <text x="772" y="548" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <rect x="888" y="290" rx="8" ry="8" width="200" height="300" fill="white" filter="url(#shadow)"/>
+  <rect x="888" y="290" rx="8" ry="8" width="200" height="150" fill="#f3e5f5"/>
+  <text x="988" y="380" font-size="48" text-anchor="middle">💻</text>
+  <text x="904" y="464" font-size="14" fill="#1a1a2e" font-weight="600">Laptop Ultra</text>
+  <text x="904" y="484" font-size="11" fill="#666">16GB RAM, 512GB SSD</text>
+  <text x="904" y="508" font-size="16" fill="#388e3c" font-weight="700">₹59,999</text>
+  <text x="974" y="508" font-size="12" fill="#666" text-decoration="line-through">₹74,999</text>
+  <rect x="904" y="526" rx="6" ry="6" width="168" height="32" fill="url(#headerGrad)"/>
+  <text x="988" y="548" fill="white" font-size="12" text-anchor="middle" font-weight="600">Add to Cart</text>
+
+  <!-- AI Chat FAB -->
+  <circle cx="1030" cy="690" r="30" fill="url(#headerGrad)" filter="url(#shadow)"/>
+  <text x="1030" y="698" font-size="24" fill="white" text-anchor="middle">🤖</text>
+</svg>
