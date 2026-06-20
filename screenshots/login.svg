@@ -7,7 +7,7 @@
   <!-- Auth Card -->
   <rect x="380" y="120" width="440" height="500" rx="16" fill="white"/>
   <text x="600" y="170" font-size="28" font-weight="800" fill="#212121" text-anchor="middle">Welcome Back</text>
-  <text x="600" y="196" font-size="14" fill="#666" text-anchor="middle">Sign in to your AI Commerce account</text>
+  <text x="600" y="196" font-size="14" fill="#666" text-anchor="middle">Sign in to your Nexa Shop account</text>
   <!-- Tabs -->
   <rect x="400" y="216" width="200" height="42" rx="6" fill="#2874f0"/>
   <text x="500" y="243" font-size="14" font-weight="600" fill="white" text-anchor="middle">Login</text>
