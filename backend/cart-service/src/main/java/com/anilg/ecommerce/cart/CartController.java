@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/cart")
 public class CartController {
+    private static final Logger log = LoggerFactory.getLogger(CartController.class);
     private final RedisTemplate<String, CartItem> redis;
     private final KafkaTemplate<String, DomainEvent> kafka;
 
@@ -74,7 +77,11 @@ public class CartController {
     }
 
     private void publish(String type, String customerEmail, Map<String, Object> payload) {
-        kafka.send("commerce.events", customerEmail, DomainEvent.of(type, customerEmail, customerEmail, payload));
+        try {
+            kafka.send("commerce.events", customerEmail, DomainEvent.of(type, customerEmail, customerEmail, payload));
+        } catch (Exception e) {
+            log.warn("Kafka send failed for cart event: {}", e.getMessage());
+        }
     }
 
     private String key(String customerEmail) {

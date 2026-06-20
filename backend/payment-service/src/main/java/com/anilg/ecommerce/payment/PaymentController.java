@@ -5,6 +5,8 @@ import com.anilg.ecommerce.common.DomainEvent;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/payments")
 public class PaymentController {
+    private static final Logger log = LoggerFactory.getLogger(PaymentController.class);
     private final PaymentRepository payments;
     private final KafkaTemplate<String, DomainEvent> kafka;
 
@@ -33,12 +36,16 @@ public class PaymentController {
         payment.setProvider(request.provider() == null ? "demo-card" : request.provider());
         payment.setStatus("PAID");
         Payment saved = payments.save(payment);
-        kafka.send("commerce.events", String.valueOf(saved.getOrderId()), DomainEvent.of(
-                "PAYMENT_COMPLETED",
-                String.valueOf(saved.getOrderId()),
-                saved.getCustomerEmail(),
-                Map.of("paymentId", saved.getId(), "orderId", saved.getOrderId(), "amount", saved.getAmount())
-        ));
+        try {
+            kafka.send("commerce.events", String.valueOf(saved.getOrderId()), DomainEvent.of(
+                    "PAYMENT_COMPLETED",
+                    String.valueOf(saved.getOrderId()),
+                    saved.getCustomerEmail(),
+                    Map.of("paymentId", saved.getId(), "orderId", saved.getOrderId(), "amount", saved.getAmount())
+            ));
+        } catch (Exception e) {
+            log.warn("Kafka send failed for payment: {}", e.getMessage());
+        }
         return ApiResponse.ok(saved);
     }
 

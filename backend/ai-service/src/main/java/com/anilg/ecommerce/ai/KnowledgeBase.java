@@ -38,7 +38,7 @@ class KnowledgeDoc {
 @Repository
 interface KnowledgeDocRepository extends JpaRepository<KnowledgeDoc, Long> {
     List<KnowledgeDoc> findByCategory(String category);
-    @Query(value = "SELECT * FROM knowledge_docs ORDER BY content <-> ?1 LIMIT ?2", nativeQuery = true)
+    @Query(value = "SELECT * FROM knowledge_docs WHERE LOWER(content) LIKE LOWER(CONCAT('%', ?1, '%')) ORDER BY id LIMIT ?2", nativeQuery = true)
     List<KnowledgeDoc> findRelevant(String query, int limit);
 }
 

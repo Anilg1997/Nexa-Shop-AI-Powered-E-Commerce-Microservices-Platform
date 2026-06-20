@@ -12,6 +12,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import javax.crypto.SecretKey;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+    private static final Logger log = LoggerFactory.getLogger(AuthController.class);
     private final UserAccountRepository users;
     private final KafkaTemplate<String, DomainEvent> kafka;
     private final SecretKey secretKey;
@@ -79,10 +82,14 @@ public class AuthController {
         user.setRole(user.getId() == null ? "CUSTOMER" : user.getRole());
         UserAccount saved = users.save(user);
         String token = generateToken(saved.getEmail(), saved.getRole());
-        kafka.send("commerce.events", saved.getEmail(), DomainEvent.of(
-                "USER_REGISTERED", String.valueOf(saved.getId()), saved.getEmail(),
-                Map.of("email", saved.getEmail(), "fullName", saved.getFullName(), "role", saved.getRole())
-        ));
+        try {
+            kafka.send("commerce.events", saved.getEmail(), DomainEvent.of(
+                    "USER_REGISTERED", String.valueOf(saved.getId()), saved.getEmail(),
+                    Map.of("email", saved.getEmail(), "fullName", saved.getFullName(), "role", saved.getRole())
+            ));
+        } catch (Exception e) {
+            log.warn("Kafka send failed for register: {}", e.getMessage());
+        }
         return ApiResponse.ok(new AuthResponse(token, "JWT", saved.getEmail(), saved.getFullName(), saved.getRole()));
     }
 
@@ -90,10 +97,14 @@ public class AuthController {
     public ApiResponse<AuthResponse> login(@Valid @RequestBody LoginRequest request) {
         UserAccount user = users.findByEmail(request.email()).orElseThrow(() -> new RuntimeException("Invalid credentials"));
         String token = generateToken(user.getEmail(), user.getRole());
-        kafka.send("commerce.events", request.email(), DomainEvent.of(
-                "USER_LOGGED_IN", request.email(), request.email(),
-                Map.of("email", request.email())
-        ));
+        try {
+            kafka.send("commerce.events", request.email(), DomainEvent.of(
+                    "USER_LOGGED_IN", request.email(), request.email(),
+                    Map.of("email", request.email())
+            ));
+        } catch (Exception e) {
+            log.warn("Kafka send failed for login: {}", e.getMessage());
+        }
         return ApiResponse.ok(new AuthResponse(token, "JWT", user.getEmail(), user.getFullName(), user.getRole()));
     }
 

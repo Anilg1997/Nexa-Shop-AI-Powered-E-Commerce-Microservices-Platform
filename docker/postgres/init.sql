@@ -1,4 +1,5 @@
-CREATE EXTENSION IF NOT EXISTS vector;
+-- pgvector extension requires manual installation on PostgreSQL
+-- CREATE EXTENSION IF NOT EXISTS vector;
 
 CREATE DATABASE authdb;
 CREATE DATABASE orderdb;

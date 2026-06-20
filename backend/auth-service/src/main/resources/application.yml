@@ -18,6 +18,10 @@ spring:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     producer:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        delivery.timeout.ms: 3000
+        request.timeout.ms: 3000
+        max.block.ms: 3000
 
 jwt:
   secret: ${JWT_SECRET:ai-commerce-secret-key-must-be-at-least-256-bits-long-for-hs256}
