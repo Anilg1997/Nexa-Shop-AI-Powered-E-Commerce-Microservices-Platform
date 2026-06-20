@@ -1,4 +1,4 @@
-# AI Commerce — AI-Powered E-Commerce Microservices Platform
+# Nexa Shop — AI-Powered E-Commerce Microservices Platform
 
 [![Java 21](https://img.shields.io/badge/Java-21-blue)](https://openjdk.org/projects/jdk/21/)
 [![Spring Boot 3.3](https://img.shields.io/badge/Spring%20Boot-3.3-brightgreen)](https://spring.io/projects/spring-boot)

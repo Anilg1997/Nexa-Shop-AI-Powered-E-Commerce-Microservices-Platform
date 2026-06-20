@@ -21,7 +21,7 @@ public class AiController {
     public AiController(ChatClient.Builder chatClientBuilder, KnowledgeBase knowledgeBase) {
         this.chatClient = chatClientBuilder
                 .defaultSystem("""
-                        You are an ecommerce AI agent for AI Commerce.
+                        You are an ecommerce AI agent for Nexa Shop.
                         Help customers find products, compare options, understand orders,
                         and answer support questions. Be concise and practical.
                         Use the retrieved knowledge context to give accurate answers.

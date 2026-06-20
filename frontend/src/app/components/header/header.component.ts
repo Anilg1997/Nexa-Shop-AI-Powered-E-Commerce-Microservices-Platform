@@ -13,7 +13,7 @@ import { AuthService } from '../../services/auth.service';
       <div class="header-inner">
         <a routerLink="/" class="logo">
           <span class="logo-icon">AI</span>
-          <span class="logo-text">Commerce</span>
+          <span class="logo-text">Nexa Shop</span>
         </a>
         <div class="search-bar">
           <input [(ngModel)]="searchQuery" (keydown.enter)="search()" placeholder="Search products..." />

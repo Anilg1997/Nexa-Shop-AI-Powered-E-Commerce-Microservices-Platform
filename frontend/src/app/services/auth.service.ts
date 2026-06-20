@@ -6,8 +6,8 @@ import { ApiResponse, AuthResponse, LoginRequest, RegisterRequest } from '../mod
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private readonly baseUrl = 'http://localhost:8080';
-  private readonly TOKEN_KEY = 'ai_commerce_token';
-  private readonly USER_KEY = 'ai_commerce_user';
+  private readonly TOKEN_KEY = 'nexa_shop_token';
+  private readonly USER_KEY = 'nexa_shop_user';
 
   isLoggedIn = signal(false);
   currentUser = signal<{ email: string; fullName: string; role: string } | null>(null);

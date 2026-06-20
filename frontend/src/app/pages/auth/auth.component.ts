@@ -13,7 +13,7 @@ import { AuthService } from '../../services/auth.service';
       <div class="auth-card">
         <div class="auth-header">
           <h1>{{ isLogin ? 'Welcome Back' : 'Create Account' }}</h1>
-          <p>{{ isLogin ? 'Sign in to your AI Commerce account' : 'Join the future of AI-powered shopping' }}</p>
+          <p>{{ isLogin ? 'Sign in to your Nexa Shop account' : 'Join the future of AI-powered shopping' }}</p>
         </div>
         <div class="auth-tabs">
           <button [class.active]="isLogin" (click)="isLogin = true">Login</button>

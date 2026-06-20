@@ -1,7 +1,7 @@
 services:
   postgres:
     image: pgvector/pgvector:pg16
-    container_name: ai-commerce-postgres
+    container_name: nexa-shop-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -13,7 +13,7 @@ services:
 
   mongo:
     image: mongo:7
-    container_name: ai-commerce-mongo
+    container_name: nexa-shop-mongo
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
@@ -24,7 +24,7 @@ services:
 
   redpanda:
     image: redpandadata/redpanda:v24.2.5
-    container_name: ai-commerce-redpanda
+    container_name: nexa-shop-redpanda
     command:
       - redpanda
       - start
@@ -50,7 +50,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: ai-commerce-redis
+    container_name: nexa-shop-redis
     ports:
       - "6379:6379"
     volumes:
@@ -58,7 +58,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:8
-    container_name: ai-commerce-pgadmin
+    container_name: nexa-shop-pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin
@@ -69,7 +69,7 @@ services:
 
   mongo-express:
     image: mongo-express:1
-    container_name: ai-commerce-mongo-express
+    container_name: nexa-shop-mongo-express
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: admin
       ME_CONFIG_MONGODB_ADMINPASSWORD: admin

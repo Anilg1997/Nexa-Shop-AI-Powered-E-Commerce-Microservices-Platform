@@ -24,7 +24,7 @@ public class EventNotificationListener {
         NotificationMessage message = new NotificationMessage();
         message.setCustomerEmail(event.actor());
         message.setChannel("EMAIL");
-        message.setSubject("AI Commerce update: " + event.type());
+        message.setSubject("Nexa Shop update: " + event.type());
         message.setBody("Demo email generated for event " + event.type() + " with payload " + event.payload());
         message.setStatus("SENT_DEMO");
         notifications.save(message);

@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.anilg.ecommerce</groupId>
-        <artifactId>ai-commerce-backend</artifactId>
+        <artifactId>nexa-shop-backend</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
     <artifactId>service-registry</artifactId>

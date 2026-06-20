@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-section">
-          <h4>AI Commerce</h4>
+          <h4>Nexa Shop</h4>
           <p>AI-powered e-commerce platform built with Spring Boot microservices, Angular, Kafka, and RAG-based LLM agents.</p>
         </div>
         <div class="footer-section">
@@ -36,7 +36,7 @@ import { RouterModule } from '@angular/router';
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 AI Commerce Microservices. Built with ❤️ for the AI era.</p>
+        <p>© 2026 Nexa Shop Microservices. Built with ❤️ for the AI era.</p>
       </div>
     </footer>
   `,

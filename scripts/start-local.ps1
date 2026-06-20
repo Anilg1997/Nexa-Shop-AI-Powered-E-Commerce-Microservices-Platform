@@ -1,5 +1,5 @@
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "  AI Commerce Microservices" -ForegroundColor Cyan
+Write-Host "  Nexa Shop Microservices" -ForegroundColor Cyan
 Write-Host "  Starting Local Development Environment" -ForegroundColor Cyan
 Write-Host "========================================" -ForegroundColor Cyan
 

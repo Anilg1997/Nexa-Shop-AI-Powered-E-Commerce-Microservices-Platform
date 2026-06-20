@@ -13,8 +13,8 @@ provider "aws" {
 }
 
 resource "aws_security_group" "app" {
-  name        = "ai-commerce-demo-sg"
-  description = "Demo access for AI Commerce"
+  name        = "nexa-shop-demo-sg"
+  description = "Demo access for Nexa Shop"
 
   ingress {
     description = "SSH"
@@ -55,6 +55,6 @@ resource "aws_instance" "demo" {
   key_name               = var.key_name
 
   tags = {
-    Name = "ai-commerce-demo"
+    Name = "nexa-shop-demo"
   }
 }

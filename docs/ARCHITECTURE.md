@@ -4,7 +4,7 @@
 
 ### System Overview
 
-AI Commerce is a **cloud-native, event-driven microservices platform** for AI-powered e-commerce. It combines traditional e-commerce functionality with RAG-based LLM agents, real-time event streaming, and vector search capabilities.
+Nexa Shop is a **cloud-native, event-driven microservices platform** for AI-powered e-commerce. It combines traditional e-commerce functionality with RAG-based LLM agents, real-time event streaming, and vector search capabilities.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
